@@ -1,10 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Appbar, Text, FAB } from 'react-native-paper';
 
 const App = () => {
+  const [count, setCount] = useState(0);
+
+  const handlePress = () => {
+    setCount(count + 1);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Hello, React Native!</Text>
-    </View>
+    <>
+      <Appbar>
+        <Appbar.Content title="Flutter Demo Home Page" />
+      </Appbar>
+      <View style={styles.container}>
+        <Text>You have pushed the button many times:</Text>
+        <Text style={styles.counter}>{count}</Text>
+        <FAB icon="plus" style={styles.fab} onPress={handlePress}></FAB>
+      </View>
+    </>
   );
 };
 export default App;
@@ -12,8 +27,18 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  counter: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    marginTop: 10,
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 10,
+    bottom: 10,
   },
 });
