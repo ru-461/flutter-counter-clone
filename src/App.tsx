@@ -11,9 +11,9 @@ const App = () => {
 
   return (
     <>
-      <Appbar>
+      <Appbar.Header>
         <Appbar.Content title="Flutter Demo Home Page" />
-      </Appbar>
+      </Appbar.Header>
       <View style={styles.container}>
         <Text>You have pushed the button many times:</Text>
         <Text style={styles.counter}>{count}</Text>
@@ -31,8 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   counter: {
-    fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 30,
     marginTop: 10,
   },
   fab: {
