@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Appbar, Text, FAB } from 'react-native-paper';
+import { useTheme } from 'react-native-paper';
 
 const App = () => {
+  const theme = useTheme();
   const [count, setCount] = useState(0);
 
   const handlePress = () => {
@@ -11,7 +13,7 @@ const App = () => {
 
   return (
     <>
-      <Appbar.Header>
+      <Appbar.Header style={{ backgroundColor: theme.colors.primaryContainer }}>
         <Appbar.Content title="Flutter Demo Home Page" />
       </Appbar.Header>
       <View style={styles.container}>
@@ -29,6 +31,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#fff',
   },
   counter: {
     fontSize: 30,
