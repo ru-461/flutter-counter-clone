@@ -14,12 +14,45 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "unused-imports", "react"],
+  "plugins": ["import", "@typescript-eslint", "unused-imports", "react"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
     "react/jsx-sort-props": "warn",
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "group": "builtin",
+            "pattern": "{react, react/**}",
+            "position": "before"
+          },
+          {
+            "group": "builtin",
+            "pattern": "react-native",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ]
   },
   "settings": {
     "react": {
