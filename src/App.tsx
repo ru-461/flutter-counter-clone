@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
 import { Appbar, Text, FAB } from 'react-native-paper';
+import { View, StyleSheet } from 'react-native';
 import { useTheme } from 'react-native-paper';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
       <View style={styles.container}>
         <Text>You have pushed the button many times:</Text>
         <Text style={styles.counter}>{count}</Text>
-        <FAB icon="plus" style={styles.fab} onPress={handlePress}></FAB>
+        <FAB icon="plus" onPress={handlePress} style={styles.fab} />
       </View>
     </>
   );
