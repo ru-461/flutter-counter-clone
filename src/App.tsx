@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Appbar, Text, FAB } from 'react-native-paper';
+
 import { View, StyleSheet } from 'react-native';
+
+import { Appbar, Text, FAB } from 'react-native-paper';
 import { useTheme } from 'react-native-paper';
 
 const App = () => {
