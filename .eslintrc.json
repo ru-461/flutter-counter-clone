@@ -17,9 +17,6 @@
   "plugins": ["import", "@typescript-eslint", "unused-imports", "react"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
-    "react/jsx-sort-props": "warn",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
     "import/order": [
       "warn",
       {
@@ -52,7 +49,10 @@
         ],
         "pathGroupsExcludedImportTypes": ["builtin"]
       }
-    ]
+    ],
+    "react/jsx-sort-props": "warn",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {
