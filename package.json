@@ -8,8 +8,10 @@
     "start": "react-native start",
     "test": "jest",
     "doctor": "react-native doctor",
-    "fix": "prettier --write src",
-    "lint": "eslint src"
+    "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --check './src/**/*.{js,jsx,ts,tsx}'",
+    "format:fix": "prettier --write './src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "react": "18.2.0",
