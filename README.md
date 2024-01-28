@@ -1,6 +1,6 @@
 # Flutter Counter Clone
 
-This is not Flutter project. This was built in Reac Native.
+This is not Flutter project. This was built in React Native.
 This is a clone of the Flutter demo app created using [React Native Paper](https://reactnativepaper.com/).
 
 ## Getting started
